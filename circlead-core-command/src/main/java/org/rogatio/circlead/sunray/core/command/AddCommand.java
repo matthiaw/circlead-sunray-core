@@ -41,7 +41,7 @@ public class AddCommand implements Action {
 			Random random = new Random();
 			this.id = new Long(random.nextInt(9000000) + 1000000);
 		}
-		workitem.setId(this.id);
+		workitem.setId(this.id); 
 		workitem.setTitle(this.title);
 		workitem.setAbbreviation(this.abbreviation);
 		workitem.setDescription(this.description);
