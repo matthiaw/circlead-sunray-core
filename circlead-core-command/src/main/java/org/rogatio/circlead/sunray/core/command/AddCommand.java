@@ -43,6 +43,7 @@ public class AddCommand implements Action {
 		}
 		workitem.setId(this.id);
 		workitem.setTitle(this.title);
+		workitem.setAbbreviation(this.abbreviation);
 		workitem.setDescription(this.description);
 		this.workitemService.add(workitem);
 		return null;
