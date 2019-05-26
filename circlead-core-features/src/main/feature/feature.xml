@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<features name="circlead-core-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.4.0">
+
+    <feature name="circlead-core-common" version="${project.version}">
+        <bundle>mvn:org.rogatio.circlead.sunray/circlead-core-api/${project.version}</bundle>
+    </feature>
+
+    <feature name="circlead-core-provider" version="${project.version}">
+        <feature version="${project.version}">circlead-core-common</feature>
+        <bundle>mvn:org.rogatio.circlead.sunray/circlead-core-provider/${project.version}</bundle>
+    </feature>
+
+    <feature name="circlead-core" version="${project.version}">
+        <feature version="${project.version}">circlead-core-provider</feature>
+        <conditional>
+            <condition>shell</condition>
+            <bundle>mvn:org.rogatio.circlead.sunray/circlead-core-command/${project.version}</bundle>
+        </conditional>
+    </feature>
+
+</features>

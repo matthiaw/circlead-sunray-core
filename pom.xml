@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+
+
+	<!-- Install in karaf with 
+	    karaf@root > feature:repo-add mvn:org.rogatio.circlead.sunray/circlead-core-features/0.0.1-SNAPSHOT/xml 
+		karaf@root > feature:install circlead-core-provider 
+		karaf@root > feature:install circlead-core 
+    -->
+
+	<groupId>org.rogatio.circlead.sunray</groupId>
+	<artifactId>circlead-core</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Circlead :: Core</name>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-bundle-plugin.version>4.2.0</maven-bundle-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
+		<karaf.version>4.2.5</karaf.version>
+		<osgi.version>6.0.0</osgi.version>
+		<osgi-compendium.version>5.0.0</osgi-compendium.version>
+		<java-compiler.version>1.8</java-compiler.version>
+	</properties>
+
+	<modules>
+		<module>circlead-core-api</module>
+		<module>circlead-core-provider</module>
+		<module>circlead-core-command</module>
+		<module>circlead-core-features</module>
+	</modules>
+
+</project>
