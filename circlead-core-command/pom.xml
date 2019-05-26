@@ -27,14 +27,12 @@
 			<artifactId>org.apache.karaf.shell.core</artifactId>
 			<version>${karaf.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
 			<version>${osgi.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.compendium</artifactId>
@@ -49,15 +47,6 @@
 				<groupId>org.apache.karaf.tooling</groupId>
 				<artifactId>karaf-services-maven-plugin</artifactId>
 				<version>${karaf.version}</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<inherited>true</inherited>
-				<version>${maven-compiler-plugin.version}</version>
-				<configuration>
-					<source>${java-compiler.version}</source>
-					<target>${java-compiler.version}</target>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>

@@ -5,13 +5,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-
-
 	<!-- Install in karaf with 
 	    karaf@root > feature:repo-add mvn:org.rogatio.circlead.sunray/circlead-core-features/0.0.1-SNAPSHOT/xml 
-		karaf@root > feature:install circlead-core-provider 
-		karaf@root > feature:install circlead-core 
-    -->
+		karaf@root > feature:install circlead-core
+	-->
 
 	<groupId>org.rogatio.circlead.sunray</groupId>
 	<artifactId>circlead-core</artifactId>
@@ -37,5 +34,19 @@
 		<module>circlead-core-command</module>
 		<module>circlead-core-features</module>
 	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<inherited>true</inherited>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${java-compiler.version}</source>
+					<target>${java-compiler.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
