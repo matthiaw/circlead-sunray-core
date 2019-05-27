@@ -1,2 +1,2 @@
-# circlead-sunray-core
+# night-prompt-karaf-cmd-bundle
 
