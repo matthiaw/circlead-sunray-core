@@ -1,5 +1,9 @@
 # night-prompt-karaf-cmd-bundle
 
+This is standalone-cone of the karaf-command-example (https://github.com/apache/karaf/tree/master/examples/karaf-command-example).
+
+## Install 
+
 Compile and add to maven repository with
 
 ```
