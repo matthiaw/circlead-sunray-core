@@ -41,7 +41,7 @@ public class ListCommand implements Action {
 		for (Workitem workitem : this.workitemService.list()) {
 			table.addRow().addContent(workitem.getId(), workitem.getAbbreviation(), workitem.getTitle(), workitem.getDescription());
 		}
-		table.print(System.out);
+		table.print(System.out); 
 		return null;
 	}
 
